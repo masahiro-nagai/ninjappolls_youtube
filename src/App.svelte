@@ -4,6 +4,7 @@
 	import PollList from "./components/PollList.svelte";
 	import CreatePollForm from "./components/CreatePollForm.svelte";
 	import Tabs from "./shared/Tabs.svelte"
+
 	//tabs
 	let items = ["Current Polls","Add New Poll"];
 	let activeItem = "Current Polls";
@@ -13,12 +14,12 @@
 	// test polls
 	
 	const handleAdd = (e) =>{
-	
 		activeItem = "Current Polls";
 	}
 
 </script>
 <Header />
+
 <main>
 	<Tabs {activeItem} {items} on:tabChange={tabChange}/>
 	{#if activeItem === "Current Polls"}
